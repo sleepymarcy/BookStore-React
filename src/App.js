@@ -10,7 +10,7 @@ function App() {
     <div>
         <MyNavbar title="Marcy's Book Store" color="dark" /> 
         <MyJumbotron />
-        <h2>Latest Releases</h2>
+        <h2>Latest Releases from Fantasy</h2>
         <LatestReleases />
         <MyFooter />
         
