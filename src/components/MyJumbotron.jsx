@@ -12,7 +12,7 @@ const MyJumbotron = () => {
             </p>
             <br></br>
             <p>
-                <a href="https://github.com/sleepymarcy/Bookstore-React"><Button variant="primary">GitHub Repo</Button></a>
+                <a href="https://github.com/sleepymarcy/BookStore-React/tree/master"><Button variant="info">GitHub Repo</Button></a>
             </p>
         </Jumbotron>
     )
