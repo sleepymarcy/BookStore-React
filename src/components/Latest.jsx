@@ -1,52 +1,30 @@
-import { Card, CardDeck } from 'react-bootstrap'
+import { Card, Row, Col, Container, ListGroup, ListGroupItem } from 'react-bootstrap'
 import books from '../data/fantasy.json'
 
 const Latest = () => {
     return (
         <>
             {
-                <CardDeck>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This card has supporting text below as a natural lead-in to additional
-                                content.{' '}
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px160" />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to
-                                show that equal height action.
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                        </Card.Footer>
-                    </Card>
-                </CardDeck>
+                <Container>
+                    <Row className="row-cols-sm-1 row-cols-md-3 row-cols-lg-4">
+                        {books.map(book => (
+                            <Col className="d-flex align-items-stretch pb-4" key={book.asin}>
+                                <Card mt-3>
+                                    <Card.Img variant="top" src={book.img} alt={book.title} />
+                                    <Card.Body>
+                                        
+                                        <ListGroup variant="flush">
+                                            <ListGroup.Item className="font-weight-bold font-italic text-center"> {book.title} </ListGroup.Item>
+                                            <ListGroup.Item>Price: €{book.price}</ListGroup.Item>
+                                        </ListGroup>
+
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+
             }
         </>
     )
