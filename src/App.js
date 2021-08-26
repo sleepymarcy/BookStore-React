@@ -19,7 +19,7 @@ function App() {
         </div>
         <hr></hr>
         <div style={{padding: '5%'}}>
-          <h2>Latest Releases from Fantasy</h2>
+          <h2 style={{fontSize: '50px'}}>Latest Releases from Fantasy</h2>
         </div>
         <Latest books={fantasy} />
         <MyFooter />
