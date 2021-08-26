@@ -3,16 +3,25 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MyNavbar from './components/MyNavbar'
 import MyFooter from './components/MyFooter'
 import MyJumbotron from './components/MyJumbotron'
-import LatestReleases from './components/LatestRelease'
 import Latest from './components/Latest'
+import WarningSign from './components/WarningSing'
+import SingleBook from './components/SingleBook'
+import fantasy from './data/fantasy.json'
 
 function App() {
   return (
     <div>
-        <MyNavbar title="Marcy's Book Store" color="dark" /> 
+        <MyNavbar title="Marcy's Book Store" color="dark" />
+        <WarningSign text="Why Men Throw Their Lives Away Attacking An Armed Witcher...I'll Never Know. Something About My Face?" />
         <MyJumbotron />
-        <h2>Latest Releases from Fantasy</h2>
-        <Latest />
+        <div style={{width: '20%', height: '20%', textAlign: 'center', margin: 'auto', padding: '5% 0'}}>
+          <SingleBook book={fantasy[0]} ></SingleBook>
+        </div>
+        <hr></hr>
+        <div style={{padding: '5%'}}>
+          <h2>Latest Releases from Fantasy</h2>
+        </div>
+        <Latest books={fantasy} />
         <MyFooter />
         
     </div>

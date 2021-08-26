@@ -1,8 +1,9 @@
-import { Jumbotron, Button, Container } from 'react-bootstrap'
+import { Jumbotron, Button } from 'react-bootstrap'
 
 const MyJumbotron = () => {
     return(
         <Jumbotron fluid className="jumbo">
+            
             <h1>Welcome!</h1>
             <p>
                 This is a simple book store web page created by me ~ Marcy
