@@ -49,13 +49,11 @@ class Latest extends React.Component {
 export default Latest
 
 {/* <Card mt-3>
-                                        <Card.Img variant="top" src={book.img} alt={book.title} />
-                                        <Card.Body>
-
-                                            <ListGroup variant="flush">
-                                                <ListGroup.Item className="font-weight-bold font-italic text-center"> {book.title} </ListGroup.Item>
-                                                <ListGroup.Item>Price: €{book.price}</ListGroup.Item>
-                                            </ListGroup>
-
-                                        </Card.Body>
-                                    </Card> */}
+        <Card.Img variant="top" src={book.img} alt={book.title} />
+        <Card.Body>
+            <ListGroup variant="flush">
+                <ListGroup.Item className="font-weight-bold font-italic text-center"> {book.title} </ListGroup.Item>
+                <ListGroup.Item>Price: €{book.price}</ListGroup.Item>
+            </ListGroup>
+        </Card.Body>
+    </Card> */}
